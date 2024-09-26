@@ -24,8 +24,10 @@ public class RentInfo {
     //локатор поля комментария для курьера
     private final By commentclient = By.cssSelector("[placeholder='Комментарий для курьера']");
     //локатор кнопки Заказать
-    private final By orderButton = By.xpath(".//div[contains(@class,'Order_Buttons')]/button[2]");
-    //конструктор
+    private final By orderButton = By.xpath(".//button[(@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать')]");
+    //локатор кнопки Да
+    private final By orderButtonFi = By.xpath(".//button[(@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Да')]");
+
     public RentInfo(WebDriver driver) {
         this.driver = driver;
     }
@@ -50,5 +52,9 @@ public class RentInfo {
     //метод нажатия кнопки
     public void clickOrderButton() {
         driver.findElement(orderButton).click();
+    }
+    //метод нажатия кнопки Да
+    public void clickOrderFinal () {
+        driver.findElement(orderButtonFi).click();
     }
 }

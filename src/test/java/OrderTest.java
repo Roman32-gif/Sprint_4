@@ -82,6 +82,7 @@ public class OrderTest {
         rent.fillColorClient(color);
         rent.fillCommentClient(comment);
         rent.clickOrderButton();
+        rent.clickOrderFinal();
         ConfirmOrder confirm = new ConfirmOrder(driver);
         confirm.checkConfirmWindowIsVisible();
     }
